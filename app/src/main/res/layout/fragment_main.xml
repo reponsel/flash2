@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".login.ui.view.LoginFragment">
+    xmlns:tools="http://schemas.android.com/tools">
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        tools:context=".main.ui.MainFragment">
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/signInContainer"
+            android:id="@+id/signContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/ic_semi_sqare_rounded"
@@ -16,88 +18,73 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="100dp">
+
             <TextView
                 android:id="@+id/tvHiThere"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_in"
+                android:text="@string/hi_there"
                 android:layout_marginBottom="40dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/evEmail"
+                app:layout_constraintBottom_toTopOf="@id/tvRegister"
                 android:textSize="50sp"
                 android:textColor="@color/white"
                 android:layout_marginHorizontal="50dp"/>
 
-            <EditText
-                android:id="@+id/evEmail"
+            <TextView
+                android:id="@+id/tvRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="email"
+                app:layout_constraintBottom_toTopOf="@id/tvSignIn"
+                android:background="@drawable/round"
                 android:layout_marginBottom="20sp"
+                android:text="@string/register"
+                android:textAlignment="center"
                 android:paddingVertical="8sp"
                 android:textSize="18sp"
-                android:layout_marginHorizontal="50dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                app:layout_constraintBottom_toTopOf="@+id/evPassword" />
-
-            <EditText
-                android:id="@+id/evPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="password"
-                android:layout_marginBottom="40sp"
-                android:paddingVertical="8sp"
-                android:textSize="18sp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:layout_marginHorizontal="50dp"
-                app:layout_constraintBottom_toTopOf="@+id/tvSignIn" />
+                android:layout_marginHorizontal="50dp"/>
 
             <TextView
                 android:id="@+id/tvSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="50dp"
-                android:layout_marginBottom="20sp"
-                android:background="@drawable/round"
+                android:background="@drawable/round_stroke"
                 android:paddingVertical="8sp"
                 android:text="@string/sign_in"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.642"
-                tools:layout_editor_absoluteX="49dp" />
+                tools:layout_editor_absoluteX="50dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hee"
+                android:padding="30sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/ic_circle"
+                app:layout_constraintTop_toBottomOf="@id/signContainer"
+                app:layout_constraintBottom_toBottomOf="@id/signContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="30dp"
+                />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="hee"
-            android:padding="30sp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:background="@drawable/ic_circle"
-            app:layout_constraintTop_toBottomOf="@id/signInContainer"
-            app:layout_constraintBottom_toBottomOf="@id/signInContainer"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="30dp"
-            />
-        <TextView
-            android:id="@+id/tvBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/back"
-            android:gravity="center"
-            android:padding="10sp"
-            android:drawableStart="@drawable/ic_baseline_arrow_back_ios_24"
             android:background="@drawable/ic_right_circle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

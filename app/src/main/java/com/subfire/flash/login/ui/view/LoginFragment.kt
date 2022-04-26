@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.subfire.flash.R
 import com.subfire.flash.databinding.FragmentLoginBinding
 import com.subfire.flash.login.ui.factory.LoginViewModelFactory
@@ -34,12 +35,12 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        loginViewModel.getTest()
-
-        loginViewModel.testmutableLiveData.observe(viewLifecycleOwner) {
-            Log.d("test", "onViewCreated: $it")
+        initialize()
+    }
+    fun initialize(){
+        loginBinding.tvBack.setOnClickListener {
+            findNavController().navigateUp()
         }
-
     }
 
 }
